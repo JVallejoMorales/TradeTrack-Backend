@@ -1,39 +1,38 @@
 // src/app.module.ts
 import { Module } from "@nestjs/common";
-import { ConfigModule } from "@nestjs/config";
+import { ConfigModule, ConfigService } from "@nestjs/config";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { MailerModule } from "@nestjs-modules/mailer";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { UsersModule } from "./modules/users/users.module";
-import { databaseConfig } from "./config/database.config";
 import { mailConfig } from "./config/mail.config";
 import { TripsModule } from "./modules/trips/trips.module";
 import { ProviderModule } from "./modules/providers/providers.module";
 import { ProductsModule } from "./products/products.module";
 import { PaymentsModule } from "./modules/payments/payments.module";
-import { AuthModule } from './modules/auth/auth.module';
+import { AuthModule } from "./modules/auth/auth.module";
 import { FileUploadModule } from "./modules/file-upload/file-upload.module";
-import { join } from 'path';
-import { NotificationsGateway } from './modules/notifications/notifications.gateway';
+import { NotificationsGateway } from "./modules/notifications/notifications.gateway";
 import { NotificationsModule } from "./modules/notifications/notifications.module";
-import { SubscriptionsModule } from './modules/subscriptions/subscriptions.module';
+import { SubscriptionsModule } from "./modules/subscriptions/subscriptions.module";
+import databaseConfig from "./config/database.config";
 
 @Module({
   imports: [
-    // Configuración de variables de entorno
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: ".env.development",
+      load: [databaseConfig],
     }),
 
-    // Configuración de base de datos
-    TypeOrmModule.forRoot(databaseConfig),
+    TypeOrmModule.forRootAsync({
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => config.get("typeorm")!,
+    }),
 
-    // Configuración de email
     MailerModule.forRoot(mailConfig),
 
-    // Módulos de la aplicación
     UsersModule,
     TripsModule,
     ProviderModule,
@@ -43,10 +42,9 @@ import { SubscriptionsModule } from './modules/subscriptions/subscriptions.modul
     SubscriptionsModule,
     FileUploadModule,
     FileUploadModule,
-    NotificationsModule
+    NotificationsModule,
   ],
   controllers: [AppController],
   providers: [AppService, NotificationsGateway],
 })
 export class AppModule {}
-//..
