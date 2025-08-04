@@ -66,6 +66,16 @@ Este proyecto consiste en una web app responsive orientada al sector de importac
 
 ---
 
+## 🚀 Tecnologías
+
+- **NestJS** - Framework de Node.js
+- **TypeScript** - Lenguaje de programación
+- **PostgreSQL** - Base de datos
+- **TypeORM** - ORM para TypeScript
+- **JWT** - Autenticación (próximamente)
+
+---
+
 ## Estructura del proyecto
 
 ```sh
@@ -875,12 +885,11 @@ Este proyecto consiste en una web app responsive orientada al sector de importac
 
 ## Empecemos
 
-### Prerrequisitos
+### 📋 Prerrequisitos
 
-Este proyecto requiere las siguientes dependencias:
-
-- **Lenguaje de programación:** TypeScript
-- **Administrador de paquetes:** Npm
+- Node.js (v16 o superior)
+- PostgreSQL
+- npm o yarn
 
 ### Instalación
 
@@ -904,18 +913,46 @@ Construya TradeTrack-Backend desde la fuente e instale las dependencias:
    ❯ npm install
    ```
 
-### Uso
+4. **Configurar variables de entorno**
+   ```bash
+   # Crear archivo .env basado en .env.example
+   cp .env.example .env
+   ```
+   
+   Editar el archivo `.env` con tus configuraciones:
+   ```env
+   NODE_ENV=development
+   PORT=3000
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_USERNAME=postgres
+   DB_PASSWORD=tu_password
+   DB_NAME=backend_pi
+   ```
 
-Ejecutar el proyecto con:
+## 🏃‍♂️ Ejecutar la aplicación
 
-**Usando [npm](https://www.npmjs.com/):**
-
-```sh
-npm start
+### Desarrollo
+```bash
+npm run start:dev
 ```
 
-## Licencia
+### Producción
+```bash
+npm run build
+npm run start:prod
+```
 
-Tradetrack-backend está protegido bajo la Licencia [LICENSE](https://choosealicense.com/licenses) License. Para más detalles, consulta el archivo [LICENSE](https://choosealicense.com/licenses/).
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crear una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia ISC. 
 
 ---
