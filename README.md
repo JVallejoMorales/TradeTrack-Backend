@@ -12,7 +12,7 @@
 <!-- BADGES -->
 <!-- local repository, no metadata badges. -->
 
-<em>Built with the tools and technologies:</em>
+<em>Construido con las herramientas y tecnologías:</em>
 
 <img src="https://img.shields.io/badge/JSON-000000.svg?style=default&logo=JSON&logoColor=white" alt="JSON">
 <img src="https://img.shields.io/badge/Socket.io-010101.svg?style=default&logo=socketdotio&logoColor=white" alt="Socket.io">
@@ -33,36 +33,40 @@
 
 ---
 
-## Table of Contents
+## Tabla de contenido
 
-- [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-- [Features](#features)
-- [Project Structure](#project-structure)
-  - [Project Index](#project-index)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Testing](#testing)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Tabla de contenido](#table-of-contents)
+- [Descripción general](#overview)
+- [Características](#features)
+- [Estructura del proyecto](#project-structure)
+  - [Índice del proyecto](#project-index)
+- [Empecemos](#getting-started)
+  - [Prerrequisitos](#prerequisites)
+  - [Instalación](#installation)
+  - [Uso](#usage)
+- [Licencia](#license)
 
 ---
 
-## Overview
+## Descripción general
+Este proyecto consiste en una web app responsive orientada al sector de importación y comercio internacional, con especial foco en los viajes de negocios a China. Actualmente, muchos importadores visitan ferias o fábricas sin un sistema estandarizado para registrar información clave sobre proveedores, lo que dificulta el seguimiento, la comparación y la colaboración posterior. Esta app busca transformar esa experiencia en una guía estructurada y colaborativa, permitiendo a los importadores registrar en tiempo real la ubicación de proveedores, fotos del lugar y productos ofrecidos, y luego compartir esa información en una base de datos comunitaria. Los usuarios podrán filtrar proveedores por categoría, calidad o ubicación, e incluso contactarse entre sí mediante una sala de chat común, generando un ecosistema de confianza y eficiencia. El valor agregado de esta plataforma es su capacidad de conectar y documentar de manera colaborativa la experiencia de importadores reales, rompiendo barreras informativas entre América y Asia, y construyendo una red descentralizada de inteligencia comercial viva y actualizada.
 
 ---
 
-## Features
+## Características
 
-<code>❯ REPLACE-ME</code>
+- Autenticación propia y externa con Auth0. Persistencia de sesión.
+- Notificaciones vía mail.
+- Almacenamiento de archivos (Cloudinary).
+- Usuario administrador con su respectivo dashboard.
+- Documentación de la aplicación en general con Swagger.
+- Implementación de plataforma de pagos con Mercado Pago.
+- Despliegue de la totalidad de proyecto con render.
+- Implementación de herramienta Google Maps.
 
 ---
 
-## Project Structure
+## Estructura del proyecto
 
 ```sh
 └── TradeTrack-Backend/
@@ -89,7 +93,7 @@
         └── express.d.ts
 ```
 
-### Project Index
+### Índice del proyecto
 
 <details open>
 	<summary><b><code>C:\PROYECTOS\TRADETRACK-BACKEND/</code></b></summary>
@@ -869,135 +873,49 @@
 
 ---
 
-## Getting Started
+## Empecemos
 
-### Prerequisites
+### Prerrequisitos
 
-This project requires the following dependencies:
+Este proyecto requiere las siguientes dependencias:
 
-- **Programming Language:** TypeScript
-- **Package Manager:** Npm
+- **Lenguaje de programación:** TypeScript
+- **Administrador de paquetes:** Npm
 
-### Installation
+### Instalación
 
-Build TradeTrack-Backend from the source and intsall dependencies:
+Construya TradeTrack-Backend desde la fuente e instale las dependencias:
 
-1. **Clone the repository:**
+1. **Clonar el repositorio:**
 
    ```sh
    ❯ git clone ../TradeTrack-Backend
    ```
 
-2. **Navigate to the project directory:**
+2. **Navegar al directorio del proyecto:**
 
    ```sh
    ❯ cd TradeTrack-Backend
    ```
 
-3. **Install the dependencies:**
+3. **Instalar las dependencias:**
 
-<!-- SHIELDS BADGE CURRENTLY DISABLED -->
+   ```sh
+   ❯ npm install
+   ```
 
-    <!-- [![npm][npm-shield]][npm-link] -->
-    <!-- REFERENCE LINKS -->
-    <!-- [npm-shield]: https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white -->
-    <!-- [npm-link]: https://www.npmjs.com/ -->
+### Uso
 
-    **Using [npm](https://www.npmjs.com/):**
+Ejecutar el proyecto con:
 
-    ```sh
-    ❯ npm install
-    ```
-
-### Usage
-
-Run the project with:
-
-**Using [npm](https://www.npmjs.com/):**
+**Usando [npm](https://www.npmjs.com/):**
 
 ```sh
 npm start
 ```
 
-### Testing
+## Licencia
 
-Tradetrack-backend uses the {**test_framework**} test framework. Run the test suite with:
-
-**Using [npm](https://www.npmjs.com/):**
-
-```sh
-npm test
-```
-
----
-
-## Roadmap
-
-- [x] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
-
----
-
-## Contributing
-
-- **💬 [Join the Discussions](https://LOCAL/Proyectos/TradeTrack-Backend/discussions)**: Share your insights, provide feedback, or ask questions.
-- **🐛 [Report Issues](https://LOCAL/Proyectos/TradeTrack-Backend/issues)**: Submit bugs found or log feature requests for the `TradeTrack-Backend` project.
-- **💡 [Submit Pull Requests](https://LOCAL/Proyectos/TradeTrack-Backend/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
-
-<details closed>
-<summary>Contributing Guidelines</summary>
-
-1. **Fork the Repository**: Start by forking the project repository to your LOCAL account.
-2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
-   ```sh
-   git clone C:\Proyectos\TradeTrack-Backend
-   ```
-3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
-   ```sh
-   git checkout -b new-feature-x
-   ```
-4. **Make Your Changes**: Develop and test your changes locally.
-5. **Commit Your Changes**: Commit with a clear message describing your updates.
-   ```sh
-   git commit -m 'Implemented new feature x.'
-   ```
-6. **Push to LOCAL**: Push the changes to your forked repository.
-   ```sh
-   git push origin new-feature-x
-   ```
-7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
-8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
-</details>
-
-<details closed>
-<summary>Contributor Graph</summary>
-<br>
-<p align="left">
-   <a href="https://LOCAL{/Proyectos/TradeTrack-Backend/}graphs/contributors">
-      <img src="https://contrib.rocks/image?repo=Proyectos/TradeTrack-Backend">
-   </a>
-</p>
-</details>
-
----
-
-## License
-
-Tradetrack-backend is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
-
----
-
-## Acknowledgments
-
-- Credit `contributors`, `inspiration`, `references`, etc.
-
-<div align="right">
-
-[![][back-to-top]](#top)
-
-</div>
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
+Tradetrack-backend está protegido bajo la Licencia [LICENSE](https://choosealicense.com/licenses) License. Para más detalles, consulta el archivo [LICENSE](https://choosealicense.com/licenses/).
 
 ---
