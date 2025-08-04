@@ -33,21 +33,6 @@
 
 ---
 
-## Tabla de contenido
-
-- [Tabla de contenido](#table-of-contents)
-- [Descripción general](#overview)
-- [Características](#features)
-- [Estructura del proyecto](#project-structure)
-  - [Índice del proyecto](#project-index)
-- [Empecemos](#getting-started)
-  - [Prerrequisitos](#prerequisites)
-  - [Instalación](#installation)
-  - [Uso](#usage)
-- [Licencia](#license)
-
----
-
 ## Descripción general
 Este proyecto consiste en una web app responsive orientada al sector de importación y comercio internacional, con especial foco en los viajes de negocios a China. Actualmente, muchos importadores visitan ferias o fábricas sin un sistema estandarizado para registrar información clave sobre proveedores, lo que dificulta el seguimiento, la comparación y la colaboración posterior. Esta app busca transformar esa experiencia en una guía estructurada y colaborativa, permitiendo a los importadores registrar en tiempo real la ubicación de proveedores, fotos del lugar y productos ofrecidos, y luego compartir esa información en una base de datos comunitaria. Los usuarios podrán filtrar proveedores por categoría, calidad o ubicación, e incluso contactarse entre sí mediante una sala de chat común, generando un ecosistema de confianza y eficiencia. El valor agregado de esta plataforma es su capacidad de conectar y documentar de manera colaborativa la experiencia de importadores reales, rompiendo barreras informativas entre América y Asia, y construyendo una red descentralizada de inteligencia comercial viva y actualizada.
 
